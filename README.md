@@ -2,7 +2,7 @@
 
 _A Practical Guide to the Cloud-Native Toolkit_
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/TODO/deploy-status)](https://app.netlify.com/projects/talk-platform-engineering/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e340e09a-a0ff-47ef-9d7d-5b07bbd05bd8/deploy-status)](https://app.netlify.com/projects/talk-platform-engineering/deploys)
 
 Take me to the [slides](https://talks.timebertt.dev/platform-engineering/)!
 
