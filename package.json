@@ -1,0 +1,33 @@
+{
+  "name": "talk-platform-engineering",
+  "version": "0.1.0",
+  "description": "Platform Engineering: A Practical Guide to the Cloud-Native Toolkit",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack build",
+    "start": "webpack serve --open",
+    "serve": "http-server ./dist -o",
+    "clean": "rm -rf ./dist"
+  },
+  "author": "Tim Ebert",
+  "dependencies": {
+    "github-buttons": "^2.29.1",
+    "qrcode": "^1.5.4",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "file-loader": "^6.2.0",
+    "highlight.js": "^11.11.1",
+    "html-webpack-plugin": "^5.6.4",
+    "http-server": "^14.1.1",
+    "loader-utils": "^3.3.1",
+    "mini-css-extract-plugin": "^2.9.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

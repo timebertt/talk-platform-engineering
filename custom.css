@@ -1,0 +1,30 @@
+.reveal img {
+    vertical-align: middle;
+}
+
+.reveal .img-inline {
+    height: 1.5em;
+    margin: 0 !important;
+}
+
+/* stretch code blocks horizontally */
+.reveal pre.code-wrapper {
+    width: 100% !important;
+}
+
+/* more space between list items */
+.reveal li {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+/* prevent table data from breaking */
+.reveal .table-no-wrap td {
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+/* overlay boxes in diagrams */
+.reveal .overlay-box {
+    position: absolute;
+    border: 5px solid #26407B;
+}

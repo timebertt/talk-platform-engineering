@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <%
+        // Add sections for markdown slides from all .md files in alphabetical order
+        const markdownAssets = compilation.getAssets().filter(asset => asset.name.endsWith('.md'));
+        markdownAssets.sort((a, b) => a.name.localeCompare(b.name));
+        %>
+        <% for (const asset of markdownAssets) { %>
+            <section data-markdown="<%- asset.name %>"
+                     data-separator="^\r?\n---\r?\n$"
+                     data-separator-vertical="^\r?\nvvv\r?\n$"
+                     data-separator-notes="^[Nn]otes?:"
+                     data-charset="utf-8">
+            </section>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
