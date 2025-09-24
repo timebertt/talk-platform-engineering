@@ -1,3 +1,8 @@
+/* Hide the "Download PDF" button when exporting to PDF */
+.export-pdf .slides-pdf-download {
+    display: none !important;
+}
+
 .reveal img {
     vertical-align: middle;
 }

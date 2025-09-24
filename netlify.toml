@@ -13,7 +13,7 @@ for = "/*"
 [headers.values]
 access-control-allow-origin = "*"
 
-# long-term caching for everything except index
+# long-term caching for everything except index and PDF export
 [[headers]]
 for = "/*"
 [headers.values]
@@ -27,5 +27,10 @@ cache-control = "public,max-age=0,must-revalidate"
 
 [[headers]]
 for = "/index.html"
+[headers.values]
+cache-control = "public,max-age=0,must-revalidate"
+
+[[headers]]
+for = "/slides.pdf"
 [headers.values]
 cache-control = "public,max-age=0,must-revalidate"
