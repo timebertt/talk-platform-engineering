@@ -5,32 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
-
-// Use host-relative requests by default for local serving (e.g., dev server).
-let baseURL = null;
-if (process.env.NETLIFY) {
-  switch (process.env.CONTEXT) {
-    case 'production':
-      // For production deploys, use the site's main address as the base URL.
-      // This always works, no matter if the site is requested on its main address or via a proxied address.
-      // If the site is requested via a proxied request, assets will be loaded via the main address.
-      baseURL = process.env.URL;
-      break;
-    case 'branch-deploy':
-      baseURL = process.env.DEPLOY_PRIME_URL;
-      break;
-    default:
-      // In deploy previews, use the unique URL for an individual deploy.
-      // With this, older deploy previews still work by using the correct base URL.
-      baseURL = process.env.DEPLOY_URL;
-      break;
-  }
-}
-
-let canonicalURL = 'https://talks.timebertt.dev/platform-engineering/';
-if (process.env.BRANCH && process.env.BRANCH !== 'main') {
-  canonicalURL += process.env.BRANCH + '/';
-}
+const canonicalURL = 'https://talks.timebertt.dev/platform-engineering/';
 
 module.exports = {
   mode: devMode ? 'development' : 'production',
@@ -58,7 +33,6 @@ module.exports = {
         'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
       },
       base: {
-        href: baseURL,
         target: '_blank'
       },
       // in production mode, hash is included in output filename, no need to append a hash query

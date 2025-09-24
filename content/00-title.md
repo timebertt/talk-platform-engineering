@@ -15,3 +15,6 @@ Tim Ebert, STACKIT
 </div>
 
 <a class="slides-qr-code"></a>
+
+<!-- this element is hidden by the ?export-pdf query param added by decktape -->
+<a class="slides-pdf-download" href="slides.pdf" download="Platform Engineering - Tim Ebert">Download slides as PDF</a>

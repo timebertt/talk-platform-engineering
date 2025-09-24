@@ -23,6 +23,12 @@ import 'highlight.js/styles/obsidian.css';
   return ctx.keys().map(ctx);
 })(require.context('./content/', false, /\.md$/));
 
+// if the URL has ?export-pdf, add a class to the body to hide the link for downloading the PDF (via CSS)
+const params = new URLSearchParams(window.location.search);
+if (params.has('export-pdf')) {
+  document.body.classList.add('export-pdf');
+}
+
 // initialize reveal.js and plugins
 Reveal.initialize({
   plugins: [Markdown, Highlight, Notes, Search, Zoom, GitHubButtons, QRCode, SlidesQRCode],
@@ -40,3 +46,6 @@ Reveal.initialize({
   width: 1200,
   height: 700,
 });
+
+// expose Reveal to the global scope for exporting PDFs with decktape
+window.Reveal = Reveal;
