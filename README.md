@@ -57,6 +57,8 @@ Run a dev server with hot-reload and open the slides in the browser:
 npm start
 ```
 
+Alternatively, use the preconfigured `start` run configuration for JetBrains IDEs in [`.run`](.run).
+
 Now, start editing the [content](./content) files.
 When saving, slides are automatically rebuilt and refreshed in the browser.
 
