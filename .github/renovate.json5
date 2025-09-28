@@ -9,4 +9,5 @@
   labels: [
     'dependencies',
   ],
+  automergeStrategy: 'squash',
 }
