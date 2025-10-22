@@ -1,4 +1,4 @@
-# Platform Engineering Lecture
+# Platform Engineering Course
 
 _A Practical Guide to the Cloud-Native Toolkit_
 
@@ -8,7 +8,7 @@ Take me to the [slides](https://talks.timebertt.dev/platform-engineering/)!
 
 ## About
 
-This is a lecture by [@timebertt](https://github.com/timebertt) at [DHBW Mannheim](https://www.mannheim.dhbw.de/).
+This is a course by [@timebertt](https://github.com/timebertt) at [DHBW Mannheim](https://www.mannheim.dhbw.de/).
 It is the first part of the Data Engineering module (third year) of the [Data Science and Artificial Intelligence course](https://www.mannheim.dhbw.de/studium/studienangebot/bachelor-studienangebot/data-science-kuenstliche-intelligenz).
 
 ### Abstract
@@ -18,6 +18,8 @@ TODO
 ### References
 
 TODO
+
+- [resources and code](https://github.com/timebertt/platform-engineering-lab) from the course
 
 ## Presenting and Editing the Slides
 
