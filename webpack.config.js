@@ -28,7 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.ejs',
-      title: 'Platform Engineering: A Practical Guide to the Cloud-Native Toolkit',
+      title: 'Platform Engineering: A Practical Guide to the Cloud Native Toolkit',
       meta: {
         'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
       },

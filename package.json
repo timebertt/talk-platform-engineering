@@ -1,14 +1,14 @@
 {
   "name": "talk-platform-engineering",
   "version": "0.1.0",
-  "description": "Platform Engineering: A Practical Guide to the Cloud-Native Toolkit",
+  "description": "Platform Engineering: A Practical Guide to the Cloud Native Toolkit",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "npm run build-webpack && npm run build-pdf",
     "build-webpack": "webpack build",
-    "build-pdf": "decktape reveal -p 10 --headless=true --chrome-arg=--allow-file-access-from-files --pdf-author='Tim Ebert' --pdf-title='Platform Engineering: A Practical Guide to the Cloud-Native Toolkit' 'dist/index.html?export-pdf' dist/slides.pdf",
+    "build-pdf": "decktape reveal -p 10 --headless=true --chrome-arg=--allow-file-access-from-files --pdf-author='Tim Ebert' --pdf-title='Platform Engineering: A Practical Guide to the Cloud Native Toolkit' 'dist/index.html?export-pdf' dist/slides.pdf",
     "serve": "http-server ./dist -o",
     "clean": "rm -rf ./dist"
   },

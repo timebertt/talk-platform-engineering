@@ -1,6 +1,6 @@
 # Platform Engineering
 
-## <em>A Practical Guide to the Cloud-Native Toolkit</em>
+### A Practical Guide to the Cloud Native Toolkit
 
 Tim Ebert, STACKIT
 
