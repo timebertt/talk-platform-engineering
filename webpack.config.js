@@ -70,12 +70,21 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/i,
+        test: /\.(s[ac]|c)ss$/i,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
-      }
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                // reveal themes are built with legacy imports
+                silenceDeprecations: ['import'],
+              },
+            },
+          },
+        ],
+      },
     ]
   },
   optimization: {
