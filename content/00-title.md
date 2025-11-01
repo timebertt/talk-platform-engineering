@@ -1,10 +1,16 @@
 # Platform Engineering
 
-### A Practical Guide to the Cloud Native Toolkit
+## A Practical Guide to the Cloud Native Toolkit
 
-Tim Ebert, STACKIT
+### DHBW Mannheim
+<!-- .element style="color: var(--r-secondary-color);" -->
 
-<!-- .slide: data-background-color="#1f1e24" -->
+Data Engineering Module (W4DSKI_401) – Part 1
+
+#### Tim Ebert, STACKIT
+<!-- .element style="color: var(--r-secondary-color); padding-top: 2em;" -->
+
+<!-- .slide: class="center" -->
 
 ---
 
