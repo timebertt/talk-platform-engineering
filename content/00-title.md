@@ -5,10 +5,10 @@
 ### DHBW Mannheim
 <!-- .element style="color: var(--r-secondary-color);" -->
 
-Data Engineering Module (W4DSKI_401) – Part 1
+Data Engineering (W4DSKI_401) – Part 1
 
 #### Tim Ebert, STACKIT
-<!-- .element style="color: var(--r-secondary-color); padding-top: 2em;" -->
+<!-- .element style="color: var(--r-secondary-color); margin-top: 2.5em;" -->
 
 <!-- .slide: class="center" -->
 

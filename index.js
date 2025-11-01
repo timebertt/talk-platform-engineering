@@ -11,11 +11,11 @@ import QRCode from './reveal/plugin/qr-code.js';
 import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
 
 // styles
-import './custom.css';
 import 'reveal.js/dist/reset.css';
 import 'reveal.js/dist/reveal.css';
-import './reveal/theme/dhbw.scss';
 import 'highlight.js/styles/obsidian.css';
+import './reveal/theme/dhbw.scss';
+import './custom.scss';
 
 // import all markdown files from ./content
 // this loads them as webpack assets that our HTML template transforms into individual reveal sections

@@ -33,3 +33,23 @@
     position: absolute;
     border: 5px solid #26407B;
 }
+
+// Utility: checklist with checkmark
+ul.checklist {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: 1.5em;
+    }
+
+    li::before {
+        content: '✅';
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        font-size: 1em;
+        line-height: 1;
+    }
+}

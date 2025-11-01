@@ -4,7 +4,6 @@
 @import "reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
 @import url(reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css);
 
@@ -24,8 +23,8 @@ $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
 $linkColor: #e2001a;
-$linkColorHover: color.scale( $secondaryColor, $lightness: -5% );
-$selectionBackgroundColor: color.scale( $secondaryColor, $lightness: 25% );
+$linkColorHover: color.scale($secondaryColor, $lightness: -5%);
+$selectionBackgroundColor: color.scale($secondaryColor, $lightness: 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
@@ -72,4 +71,9 @@ $overlayElementFgColor: 240, 240, 240;
       }
     }
   }
+}
+
+// Smaller font size for nested lists
+ul ul {
+  font-size: 90%;
 }
