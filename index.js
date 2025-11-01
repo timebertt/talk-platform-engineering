@@ -14,7 +14,7 @@ import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
 import './custom.css';
 import 'reveal.js/dist/reset.css';
 import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/white.css';
+import './reveal/theme/dhbw.scss';
 import 'highlight.js/styles/obsidian.css';
 
 // import all markdown files from ./content
@@ -34,7 +34,7 @@ Reveal.initialize({
   plugins: [Markdown, Highlight, Notes, Search, Zoom, GitHubButtons, QRCode, SlidesQRCode],
   hash: true,
   history: true,
-  center: true,
+  center: false,
   controls: true,
   navigationMode: 'default',
   // disable scroll view on mobile devices

@@ -1,0 +1,75 @@
+// Default mixins and settings -----------------
+@use "sass:color";
+@import "reveal.js/css/theme/template/mixins";
+@import "reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see reveal.js/css/theme/template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #000;
+$secondaryColor: #5c6971;
+$headingColor: #e2001a;
+
+$mainFontSize: 36px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #e2001a;
+$linkColorHover: color.scale( $secondaryColor, $lightness: -5% );
+$selectionBackgroundColor: color.scale( $secondaryColor, $lightness: 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+$overlayElementBgColor: 0, 0, 0;
+$overlayElementFgColor: 240, 240, 240;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+// expose custom variables
+:root {
+  --r-secondary-color: #{$secondaryColor};
+}
+
+// Custom styles -------------------------------
+
+// Reusable centering mixin for slides,
+// same as setting center=true globally in slide attributes but for individual slides
+@mixin center-slide() {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.reveal .slides {
+  section {
+    &.center {
+      @include center-slide();
+    }
+
+    &.stack {
+      // the first slide of a vertical slide stack
+      > section:first-child {
+        @include center-slide();
+      }
+    }
+  }
+}
