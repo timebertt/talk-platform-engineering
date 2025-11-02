@@ -27,7 +27,7 @@ vvv
 
 <img alt="Feedback" src="../assets/feedback.jpg" class="r-stretch">
 
-➡️ TODO: add form link 🙏
+➡️ Leave feedback in [Moodle](https://moodle.dhbw-mannheim.de/mod/feedback/view.php?id=396059) 🙏
 
 vvv
 
