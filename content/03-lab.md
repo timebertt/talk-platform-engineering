@@ -38,5 +38,3 @@ kubectl expose deployment nginx --type=LoadBalancer --port=80
 kubectl get svc nginx -oyaml | yq '.status.loadBalancer.ingress[].ip' # choose one
 curl http://<LOAD_BALANCER_IP>
 ```
-
-<!-- .slide: class="center" -->

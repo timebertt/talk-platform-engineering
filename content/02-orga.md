@@ -6,9 +6,7 @@ vvv
 
 [tim.ebert@stackit.cloud](mailto:tim.ebert@stackit.cloud)
 
-```text
-// TODO(class representatives): contact me!
-```
+`// TODO(class representatives): contact me!`
 
 <!-- .slide: class="center" -->
 

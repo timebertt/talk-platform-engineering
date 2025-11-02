@@ -73,18 +73,33 @@ $overlayElementFgColor: 240, 240, 240;
 
     // stretch code blocks as wide as needed
     pre.code-wrapper {
-      width: auto;
+      width: fit-content;
       max-width: 100%;
 
       code {
-        padding: 20px;
         border-radius: 8px;
         line-height: 1.5;
+        max-height: 500px;
 
         &.hljs {
-          min-height: unset;
+          padding: 1em;
         }
       }
+    }
+
+    // Inline code styling (not code blocks)
+    code:not(pre.code-wrapper code) {
+      background: #f5f5f5;
+      border-radius: 5px;
+      padding: 0.1em 0.3em;
+      font-size: 0.9em;
+      box-decoration-break: clone;
+      word-break: break-word;
+    }
+
+    // Grey color for inline code not in headings
+    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > code:not(pre.code-wrapper code) {
+      color: #555;
     }
   }
 }
