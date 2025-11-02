@@ -70,6 +70,22 @@ $overlayElementFgColor: 240, 240, 240;
         @include center-slide();
       }
     }
+
+    // stretch code blocks as wide as needed
+    pre.code-wrapper {
+      width: auto;
+      max-width: 100%;
+
+      code {
+        padding: 20px;
+        border-radius: 8px;
+        line-height: 1.5;
+
+        &.hljs {
+          min-height: unset;
+        }
+      }
+    }
   }
 }
 
