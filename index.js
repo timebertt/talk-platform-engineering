@@ -10,6 +10,9 @@ import GitHubButtons from './reveal/plugin/github-buttons';
 import QRCode from './reveal/plugin/qr-code.js';
 import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
 
+// marked
+import markedFootnoteReferences from './reveal/marked/footnotes.js';
+
 // styles
 import 'reveal.js/dist/reset.css';
 import 'reveal.js/dist/reveal.css';
@@ -29,9 +32,13 @@ if (params.has('export-pdf')) {
   document.body.classList.add('export-pdf');
 }
 
+// Register marked customizations
+const markdown = Markdown();
+markdown.marked.use(markedFootnoteReferences());
+
 // initialize reveal.js and plugins
 Reveal.initialize({
-  plugins: [Markdown, Highlight, Notes, Search, Zoom, GitHubButtons, QRCode, SlidesQRCode],
+  plugins: [markdown, Highlight, Notes, Search, Zoom, GitHubButtons, QRCode, SlidesQRCode],
   hash: true,
   history: true,
   center: false,
@@ -44,7 +51,7 @@ Reveal.initialize({
   hashOneBasedIndex: true,
 
   width: 1200,
-  height: 700,
+  height: 700
 });
 
 // expose Reveal to the global scope for exporting PDFs with decktape
