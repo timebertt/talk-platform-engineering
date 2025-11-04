@@ -23,7 +23,8 @@ vvv
 
 ## Feedback Welcome!
 
-<img alt="Feedback" src="../assets/feedback.jpg" class="r-stretch">
+![Feedback](../assets/feedback.jpg)
+<!-- .element: class="r-stretch" -->
 
 ➡️ Leave feedback in [Moodle](https://moodle.dhbw-mannheim.de/mod/feedback/view.php?id=396272) 🙏
 

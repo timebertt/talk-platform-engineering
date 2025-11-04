@@ -4,7 +4,7 @@
 const globalFootnoteOrder = [];
 const globalFootnoteDefs = {};
 
-function markedFootnoteReferences() {
+export default function markedFootnoteReferences() {
   return {
     hooks: {
       preprocess(markdown) {
@@ -41,5 +41,3 @@ function markedFootnoteReferences() {
     }
   };
 }
-
-export default markedFootnoteReferences;

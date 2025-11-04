@@ -22,7 +22,8 @@ vvv
 
 ## Cluster Credentials
 
-<img alt="Lab" src="../assets/lab.jpg" class="r-stretch">
+![Lab](../assets/lab.jpg)
+<!-- .element: class="r-stretch" -->
 
 ➡️ Get them in [Moodle](https://moodle.dhbw-mannheim.de/course/section.php?id=103110)
 

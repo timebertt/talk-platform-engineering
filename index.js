@@ -10,8 +10,9 @@ import GitHubButtons from './reveal/plugin/github-buttons';
 import QRCode from './reveal/plugin/qr-code.js';
 import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
 
-// marked
+// marked extensions
 import markedFootnoteReferences from './reveal/marked/footnotes.js';
+import markedUnwrapImageParagraph from './reveal/marked/image-paragraph.js';
 
 // styles
 import 'reveal.js/dist/reset.css';
@@ -35,6 +36,7 @@ if (params.has('export-pdf')) {
 // Register marked customizations
 const markdown = Markdown();
 markdown.marked.use(markedFootnoteReferences());
+markdown.marked.use(markedUnwrapImageParagraph());
 
 // initialize reveal.js and plugins
 Reveal.initialize({

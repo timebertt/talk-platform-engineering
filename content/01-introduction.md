@@ -12,13 +12,15 @@ vvv
 
 ## Separate Dev & Ops ⚔️ ☠️
 
-<img alt="Dev and Ops" src="../assets/dev-and-ops.jpg" class="r-stretch">
+![Dev and Ops](../assets/dev-and-ops.jpg)
+<!-- .element: class="r-stretch" -->
 
 vvv
 
 ## DevOps 🤝 ✅
 
-<img alt="DevOps" src="../assets/devops.jpg" class="r-stretch">
+![DevOps](../assets/devops.jpg)
+<!-- .element: class="r-stretch" -->
 
 > You build it, you run it.
 > 
@@ -30,7 +32,8 @@ vvv
 
 ## Long Live Platform Engineering? 🏗️ 👑
 
-<img alt="Platform Engineering replaces DevOps" src="../assets/platform-engineering.jpg" class="r-stretch">
+![Platform Engineering replaces DevOps](../assets/platform-engineering.jpg)
+<!-- .element: class="r-stretch" -->
 
 [^platform-engineering-vs-devops]
 
@@ -61,7 +64,8 @@ vvv
 
 ## Isn't This Data Engineering? 🤔
 
-<img alt="Data and Platform Engineering" src="../assets/data-and-platform-engineering.jpg" class="r-stretch">
+![Data and Platform Engineering](../assets/data-and-platform-engineering.jpg)
+<!-- .element: class="r-stretch" -->
 
 vvv
 
@@ -111,7 +115,8 @@ vvv
 
 vvv
 
-<img alt="Cloud Native Landscape" src="../assets/cloud-native-landscape.jpg" class="r-stretch">
+![Cloud Native Landscape](../assets/cloud-native-landscape.jpg)
+<!-- .element: class="r-stretch" -->
 
 vvv
 
@@ -127,6 +132,7 @@ vvv
 
 ## A Word on AI 🤖
 
-<img alt="AI usage encouraged" src="../assets/ai-encouraged.jpg" class="r-stretch">
+![AI usage encouraged](../assets/ai-encouraged.jpg)
+<!-- .element: class="r-stretch" -->
 
 ⚠️ But: double-check results and ensure you understand them ‼️

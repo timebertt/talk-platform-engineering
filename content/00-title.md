@@ -16,9 +16,7 @@ Data Engineering (W4DSKI_401) – Part 1
 
 ## Slides Available Online
 
-<div class="r-stretch">
-<img class="slides-qr-code">
-</div>
+<img class="slides-qr-code r-stretch">
 
 <a class="slides-qr-code"></a>
 
