@@ -25,7 +25,7 @@ vvv
 
 <img alt="Feedback" src="../assets/feedback.jpg" class="r-stretch">
 
-➡️ Leave feedback in [Moodle](https://moodle.dhbw-mannheim.de/mod/feedback/view.php?id=396059) 🙏
+➡️ Leave feedback in [Moodle](https://moodle.dhbw-mannheim.de/mod/feedback/view.php?id=396272) 🙏
 
 vvv
 

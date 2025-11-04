@@ -24,7 +24,7 @@ vvv
 
 <img alt="Lab" src="../assets/lab.jpg" class="r-stretch">
 
-➡️ Get them in [Moodle](https://moodle.dhbw-mannheim.de/course/section.php?id=101410)
+➡️ Get them in [Moodle](https://moodle.dhbw-mannheim.de/course/section.php?id=103110)
 
 vvv
 
