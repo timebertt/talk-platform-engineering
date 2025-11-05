@@ -58,6 +58,12 @@ $overlayElementFgColor: 240, 240, 240;
   height: 100%;
 }
 
+@mixin quote-style() {
+  color: #555;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
 .reveal .slides {
   section {
     &.center {
@@ -102,6 +108,29 @@ $overlayElementFgColor: 240, 240, 240;
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > code:not(pre.code-wrapper code) {
       color: #555;
     }
+  }
+
+  // blockquote styling
+  blockquote {
+    @include quote-style();
+    border-left: 3px solid $secondaryColor;
+    padding: 0.2em 0.5em;
+  }
+
+  // footnote styling
+  .footnote-ref {
+    color: $linkColor;
+    vertical-align: super;
+    font-size: 0.6em;
+  }
+
+  div.footnote-defs {
+    @include quote-style();
+    border-left: 3px solid $linkColor;
+    padding: 0.5em 1em;
+    font-size: 0.6em;
+    line-height: 1.1;
+    margin-top: 1em;
   }
 }
 

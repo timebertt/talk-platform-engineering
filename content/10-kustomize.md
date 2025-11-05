@@ -100,7 +100,7 @@ vvv
 
 ### Strategic Merge Patch
 
-```yaml[1-5|10-13|15-17]
+```yaml[1-5|6-10|10-13|15-17]
 # patch-deployment-dev.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -110,7 +110,7 @@ spec:
   template:
     spec:
       containers:
-        - name: server
+        - name: server # strategic merge by name
           env:
           - name: ENV
             value: "development"
@@ -194,9 +194,14 @@ vvv
 
 ## Lab: Kustomize
 
-- Use [kustomize](https://kustomize.io/) to deploy the [podinfo](https://github.com/stefanprodan/podinfo) application
-- Define a base configuration and overlays for `development` and `production` environments
-- Deploy the variants in dedicated namespaces `podinfo-dev` and `podinfo-prod`
-- The `development` environment should use the `latest` image tag and enable debug logging
-- The `production` environment should use a specific image tag and 2 replicas for high availability
-- Expose the application via a `LoadBalancer` service in both environments
+- Use [kustomize](https://kustomize.io/) to deploy the [podinfo](https://github.com/stefanprodan/podinfo) application.
+- Define a base configuration and overlays for `development` and `production` environments.
+- Deploy the variants in dedicated namespaces `podinfo-dev` and `podinfo-prod`.
+- Set the UI message to "Hello, Platform Engineering!"
+- Expose the application via a `LoadBalancer` service on port `12000` and `12001` respectively. [^lb-restrictions]
+- The `development` environment should use the `latest` image tag and enable debug logging.
+- The `production` environment should use the `6.9.0` image tag and 2 replicas for high availability.
+
+<!-- .element: style="font-size: 0.8em;" -->
+
+[^lb-restrictions]: Due to [cluster limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations), only a single LoadBalancer can use a given port number. Ensure that the used ports do not conflict with other LoadBalancer services in your cluster.
