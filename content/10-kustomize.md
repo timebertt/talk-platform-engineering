@@ -117,7 +117,7 @@ spec:
 
 # kustomization.yaml
 patches:
-- file: patch-deployment-dev.yaml
+- path: patch-deployment-dev.yaml
 ```
 
 vvv
@@ -127,7 +127,7 @@ vvv
 ```yaml[1-3|4-6|8-11|12-14]
 # kustomization.yaml
 patches:
-- file: patch-deployment-dev.yaml
+- path: patch-deployment-dev.yaml
   target:
     kind: Deployment
     name: slides
@@ -184,7 +184,7 @@ resources:
 - ../../base
 
 patches:
-- file: patch-deployment.yaml
+- path: patch-deployment.yaml
 
 # additional resources, patches, or transformations
 # specific to an individual environment...
@@ -198,10 +198,10 @@ vvv
 - Define a base configuration and overlays for `development` and `production` environments.
 - Deploy the variants in dedicated namespaces `podinfo-dev` and `podinfo-prod`.
 - Set the UI message to "Hello, Platform Engineering!"
-- Expose the application via a `LoadBalancer` service on port `12000` and `12001` respectively. [^lb-restrictions]
 - The `development` environment should use the `latest` image tag and enable debug logging.
-- The `production` environment should use the `6.9.0` image tag and 2 replicas for high availability.
+- The `production` environment should use the `6.9.0` image tag and expose the application via a `LoadBalancer` service on port `12000`. [^lb-restrictions]
+- Verify the expected results by accessing the application using `kubectl port-forward` and the external IP of the LoadBalancer service (production environment only).
 
 <!-- .element: style="font-size: 0.8em;" -->
 
-[^lb-restrictions]: Due to [cluster limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations), only a single LoadBalancer can use a given port number. Ensure that the used ports do not conflict with other LoadBalancer services in your cluster.
+[^lb-restrictions]: Due to [cluster limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations), only a single LoadBalancer can use a given port number. Ensure that the used ports do not conflict with other LoadBalancer services in your cluster. Otherwise, your service's external IP will remain `<pending>`.

@@ -10,6 +10,7 @@ Take me to the [slides](https://talks.timebertt.dev/platform-engineering/)!
 
 This is a course by [@timebertt](https://github.com/timebertt) at [DHBW Mannheim](https://www.mannheim.dhbw.de/).
 It is the first part of the Data Engineering module (third year) of the [Data Science and Artificial Intelligence course](https://www.mannheim.dhbw.de/studium/studienangebot/bachelor-studienangebot/data-science-kuenstliche-intelligenz).
+Additional resources and code from the course can be found in the [platform-engineering-lab](https://github.com/timebertt/platform-engineering-lab) repository.
 
 ### Abstract
 
