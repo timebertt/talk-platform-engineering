@@ -74,6 +74,7 @@ $overlayElementFgColor: 240, 240, 240;
     // stretch code blocks as wide as needed
     pre.code-wrapper {
       width: fit-content;
+      min-width: 60%;
       max-width: 100%;
 
       code {

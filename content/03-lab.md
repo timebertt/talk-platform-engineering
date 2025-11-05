@@ -29,7 +29,7 @@ vvv
 
 vvv
 
-## Get Started 🚀
+## Lab: Get Started
 
 Run a quick test to verify your setup:
 
