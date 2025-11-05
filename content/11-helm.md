@@ -98,24 +98,25 @@ vvv
   ```
 - Install from OCI registry:
   ```bash
-  helm install myapp oci://ghcr.io/timebertt/charts/slides --version 0.1.0
+  helm install slides oci://ghcr.io/timebertt/charts/slides --version 0.1.0
   ```
 
 vvv
 
 ## Consuming Community Charts
 
-- Add a repository and fetch its charts:
+- Consume a chart from an OCI registry (recommended):
   ```bash
-  # OCI repository (newer, preferred)
-  helm repo add prometheus-community oci://ghcr.io/prometheus-community/charts/prometheus
-  # HTTPS repository (older)
-  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
-  helm repo update
+  helm install my-prometheus oci://ghcr.io/prometheus-community/charts/prometheus \
+    --namespace monitoring \
+    --set server.persistentVolume.size=10Gi \
+    --values my-values.yaml
   ```
-- Customize and install a chart:
+- Alternatively, add an HTTPS repository and fetch its charts (legacy):
   ```bash
+  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  helm repo update
+
   helm install my-prometheus prometheus-community/prometheus \
     --namespace monitoring \
     --set server.persistentVolume.size=10Gi \
@@ -126,19 +127,18 @@ vvv
 
 ## More Helm Commands
 
-- `helm search repo <keyword>` – Search for charts
-- `helm show values <chart>` – Show configurable values of a chart
 - `helm list` – List releases installed in the cluster
 - `helm upgrade --install ...` – Install or upgrade a release
 - `helm uninstall <release>` – Remove a release
+- `helm show values <chart>` – Show configurable values of a chart
 
 vvv
 
 ## Lab: Helm
 
-- Use [Helm](https://helm.sh/) to deploy the [podinfo](https://github.com/stefanprodan/podinfo) application – as done previously in the [Kustomize lab](#/lab-kustomize).
+- Deploy the [podinfo](https://github.com/stefanprodan/podinfo) application – as done previously in the [Kustomize lab](#/lab-kustomize) – but this time using [Helm](https://helm.sh/).
 - To prevent conflicts with the previous lab, use new namespaces `podinfo-helm-dev` and `podinfo-helm-prod`.
-- Set the service ports to `12002` and `12003` respectively.
+- To avoid port conflicts with the previous lab, set the LoadBalancer service's `http` port in production to `12001` and disable the `grcp` port (set the `service.grpcPort` value to `null`).
 
 vvv
 
@@ -149,13 +149,16 @@ vvv
 
 ## Kustomize vs. Helm
 
-| Kustomize                       | Helm                         |
-|---------------------------------|------------------------------|
-| Native Kubernetes tool          | Separate tool                |
-| Composes and transforms objects | Go templates over YAML files |
-| Simpler, less abstraction       | More powerful customization  |
-| No built-in distribution        | Chart repositories           |
-| No resource tracking            | Release tracking, rollbacks  |
+| Kustomize                                 | Helm                         |
+|-------------------------------------------|------------------------------|
+| Native Kubernetes tool                    | Separate tool                |
+| Composes and transforms objects           | Go templates over YAML files |
+| Simpler, less abstraction                 | More powerful customization  |
+| No built-in distribution [^flux-artifact] | Chart repositories           |
+| No resource tracking [^flux-tracking]     | Release tracking, rollbacks  |
+
+[^flux-artifact]: Apart from Git-based distribution, Kustomizations can be distributed via OCI artifacts using the [Flux CLI](https://fluxcd.io/flux/cheatsheets/oci-artifacts/) (supports arbitrary manifests).
+[^flux-tracking]: FluxCD tracks all resources belonging to `Kustomizations` and can [garbage collect resources](https://fluxcd.io/docs/components/kustomize/kustomization/#prune) automatically.
 
 vvv
 

@@ -16,12 +16,6 @@ Additional resources and code from the course can be found in the [platform-engi
 
 TODO
 
-### References
-
-TODO
-
-- [resources and code](https://github.com/timebertt/platform-engineering-lab) from the course
-
 ## Presenting and Editing the Slides
 
 Slides are built in Markdown using [reveal.js](https://revealjs.com/), packaged with [webpack](https://webpack.js.org/), and deployed with [Netlify](https://www.netlify.com/).
