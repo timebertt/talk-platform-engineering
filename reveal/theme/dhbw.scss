@@ -94,6 +94,11 @@ $overlayElementFgColor: 240, 240, 240;
       }
     }
 
+    // make code blocks in list items full width
+    li pre.code-wrapper {
+      width: 100%;
+    }
+
     // Inline code styling (not code blocks)
     code:not(pre.code-wrapper code) {
       background: #f5f5f5;

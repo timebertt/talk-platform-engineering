@@ -44,7 +44,7 @@ vvv
 
 vvv
 
-### Kustomization
+## Kustomization
 
 kustomization = directory + `kustomization.yaml`
 
@@ -56,7 +56,7 @@ kustomization = directory + `kustomization.yaml`
 
 vvv
 
-### Kustomization Example
+## Kustomization Example
 
 ```yaml[1-3|5|7-9|11-15]
 # kustomization.yaml
@@ -78,7 +78,7 @@ configMapGenerator:
 
 vvv
 
-### Kustomize Generators
+## Kustomize Generators
 
 ```yaml[1-6|8-13]
 # kustomization.yaml
@@ -98,7 +98,7 @@ generatorOptions:
 
 vvv
 
-### Strategic Merge Patch
+## Strategic Merge Patch
 
 ```yaml[1-5|6-10|10-13|15-17]
 # patch-deployment-dev.yaml
@@ -122,7 +122,7 @@ patches:
 
 vvv
 
-### JSON Patch (RFC 6902)
+## JSON Patch (RFC 6902)
 
 ```yaml[1-3|4-6|8-11|12-14]
 # kustomization.yaml
@@ -143,7 +143,7 @@ patches:
 
 vvv
 
-### Remote Resources
+## Remote Resources
 
 ```yaml[1-3|4-5|6-7]
 # kustomization.yaml
@@ -157,7 +157,7 @@ resources:
 
 vvv
 
-### Kustomize Overlays
+## Kustomize Overlays
 
 ```text[1-5|6-9|10-12]
 deploy
@@ -176,7 +176,7 @@ deploy
 
 vvv
 
-### Kustomize Overlays
+## Kustomize Overlays
 
 ```yaml[]
 # deploy/overlays/*/kustomization.yaml
