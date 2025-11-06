@@ -8,13 +8,17 @@ Take me to the [slides](https://talks.timebertt.dev/platform-engineering/)!
 
 ## About
 
-This is a course by [@timebertt](https://github.com/timebertt) at [DHBW Mannheim](https://www.mannheim.dhbw.de/).
+This is a university course by [Tim Ebert](https://github.com/timebertt) at [DHBW Mannheim](https://www.mannheim.dhbw.de/).
 It is the first part of the Data Engineering module (third year) of the [Data Science and Artificial Intelligence course](https://www.mannheim.dhbw.de/studium/studienangebot/bachelor-studienangebot/data-science-kuenstliche-intelligenz).
-Additional resources and code from the course can be found in the [platform-engineering-lab](https://github.com/timebertt/platform-engineering-lab) repository.
+Code and solutions for the lab exercises can be found in the [platform-engineering-lab](https://github.com/timebertt/platform-engineering-lab) repository.
 
 ### Abstract
 
-TODO
+As the first part of the Data Engineering course, this lecture introduces the fundamental concepts and practices of platform engineering, serving as a solid foundation for modern data engineering.
+The course covers essential cloud native technologies and platform engineering principles required to build and operate scalable and resilient platforms.
+Students will learn how to leverage Kubernetes as the de-facto standard for building cloud native platforms, orchestrating not only containers but also entire application landscapes and infrastructure.
+By the end of the course, students will have a solid understanding of popular cloud native tools based on practical experiences with hands-on labs.
+The course aims at teaching students how to apply platform engineering principles to build platforms for enabling other teams to focus on what they do best – be it software development or data science.
 
 ## Presenting and Editing the Slides
 
