@@ -149,16 +149,16 @@ vvv
 
 ## Kustomize vs. Helm
 
-| Kustomize                                 | Helm                         |
-|-------------------------------------------|------------------------------|
-| Native Kubernetes tool                    | Separate tool                |
-| Composes and transforms objects           | Go templates over YAML files |
-| Simpler, less abstraction                 | More powerful customization  |
-| No built-in distribution [^flux-artifact] | Chart repositories           |
-| No resource tracking [^flux-tracking]     | Release tracking, rollbacks  |
+| Kustomize                                | Helm                         |
+|------------------------------------------|------------------------------|
+| Native Kubernetes tool                   | Separate tool                |
+| Composes and transforms objects          | Go templates over YAML files |
+| Simpler, less abstraction                | More powerful customization  |
+| No built-in distribution[^flux-artifact] | Chart repositories           |
+| No resource tracking[^flux-tracking]     | Release tracking, rollbacks  |
 
 [^flux-artifact]: Apart from Git-based distribution, Kustomizations can be distributed via OCI artifacts using the [Flux CLI](https://fluxcd.io/flux/cheatsheets/oci-artifacts/) (supports arbitrary manifests).
-[^flux-tracking]: FluxCD tracks all resources belonging to `Kustomizations` and can [garbage collect resources](https://fluxcd.io/docs/components/kustomize/kustomization/#prune) automatically.
+[^flux-tracking]: Flux tracks all resources belonging to `Kustomizations` and can [garbage collect resources](https://fluxcd.io/docs/components/kustomize/kustomization/#prune) automatically.
 
 vvv
 
