@@ -21,4 +21,7 @@ Data Engineering (W4DSKI_401) – Part 1
 <a class="slides-qr-code"></a>
 
 <!-- this element is hidden by the ?export-pdf query param added by decktape -->
+<!--
+Remove PDF download for now, as it currently does not work well animated code blocks
 <a class="slides-pdf-download" href="slides.pdf" download="Platform Engineering - Tim Ebert">Download slides as PDF</a>
+-->
