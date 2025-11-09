@@ -39,7 +39,7 @@ vvv
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: podinfo-example
+  name: podinfo
 spec:
   rules:
   - host: podinfo.example.com

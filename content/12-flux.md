@@ -1,6 +1,6 @@
 # Continuous Deployment
 
-### GitOps with Flux
+### GitOps With Flux
 
 vvv
 
