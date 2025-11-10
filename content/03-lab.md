@@ -34,6 +34,7 @@ vvv
 Run a quick test to verify your setup:
 
 ```bash
+export KUBECONFIG=<path-to-your-kubeconfig-file>
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --type=LoadBalancer --port=80
 kubectl get svc nginx -oyaml | yq '.status.loadBalancer.ingress[].ip' # choose one
