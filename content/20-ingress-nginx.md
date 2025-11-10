@@ -89,5 +89,5 @@ vvv
 
 <!-- .element: style="font-size: 0.8em;" -->
 
-[^lb-restrictions]: Keep in mind the cluster's [LoadBalancer limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations): only a single LoadBalancer can use a given port number. Ensure that the ingress-nginx LoadBalancer is the only Service listening on port `80` and `443`. Otherwise, the service's external IP will remain `<pending>`.
+[^lb-restrictions]: Keep in mind the cluster's [LoadBalancer limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations): only a single LoadBalancer can use a given port number. Ensure that the ingress-nginx LoadBalancer is the only Service listening on port `80` and `443`. Otherwise, the service's external IP will remain `<pending>`. I.e., delete the `nginx` LoadBalancer Service created in the first lab.
 [^ingress-class]: Tip: the `Ingress.spec.ingressClassName` field specifies which Ingress controller should handle the Ingress resource. You either need to specify `nginx` explicitly, or configure the `HelmRelease` to make `nginx` the default `IngressClass`.
