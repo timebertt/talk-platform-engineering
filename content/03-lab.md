@@ -4,6 +4,14 @@
 
 vvv
 
+## Lab Exercises
+
+- Each student gets their own Kubernetes cluster in the [DHBW Cloud](https://dhbw.cloud/)
+- Tasks are presented in the slides
+- Solutions and explanations can be found in the `labs` directory of the [platform-engineering-lab repository](https://github.com/timebertt/platform-engineering-lab)
+
+vvv
+
 ## Prerequisites
 
 Please double-check:
@@ -34,9 +42,11 @@ vvv
 Run a quick test to verify your setup:
 
 ```bash
+# Configure kubectl to use the downloaded kubeconfig file 
 export KUBECONFIG=<path-to-your-kubeconfig-file>
+
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --type=LoadBalancer --port=80
-kubectl get svc nginx -oyaml | yq '.status.loadBalancer.ingress[].ip' # choose one
+kubectl get svc nginx # pick one external IP
 curl http://<LOAD_BALANCER_IP>
 ```

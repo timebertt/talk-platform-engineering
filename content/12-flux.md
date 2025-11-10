@@ -53,7 +53,7 @@ vvv
 
 ## Getting Started with Flux
 
-```bash[1-2|4-6|8-9|11-17]
+```bash[1-2|4-6|8-9|11-17|19-20]
 # Install the Flux CLI
 brew install fluxcd/tap/flux
 
@@ -71,6 +71,9 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/dhbw \
   --personal
+
+# Clone the created repository locally to add more manifests
+git clone https://github.com/$GITHUB_USER/platform-engineering-lab
 ```
 
 vvv
@@ -201,9 +204,9 @@ vvv
 ## Lab: Flux
 
 - [Install Flux](https://fluxcd.io/flux/get-started/) in your cluster and deploy applications using GitOps.
-- Create a personal GitHub repository to store your Flux configuration and your deployment manifests.
-- Add your manifests for the `podinfo` application from the [Kustomize Lab](#/lab-kustomize) to the repository.
-- Create `Kustomization` manifests to deploy the `podinfo` application in both the `development` and `production` environments.
+- Create a personal GitHub repository to store your Flux configuration and your deployment manifests. Specify `--path=clusters/dhbw` when bootstrapping Flux.
+- Clone the repository locally and commit the manifests for the `podinfo` application from the [Kustomize Lab](#/lab-kustomize) to the repository (in the `deploy` folder).
+- Create two Flux `Kustomization` manifests in the `clusters/dhbw` folder to deploy the `podinfo` application in both the `development` and `production` environments, referencing the appropriate overlays paths in the `deploy` folder. Use the `flux-system` namespace and reference the `flux-system` `GitRepository` created during bootstrapping.
 - Commit and push the new manifests to the main branch of your GitHub repository.
 - Verify that Flux deploys the application in both environments as expected.
 - Bonus: install [Headlamp](https://headlamp.dev/) and use the [Flux plugin](https://github.com/headlamp-k8s/plugins/blob/main/flux) for visualizing the state of your GitOps deployments.

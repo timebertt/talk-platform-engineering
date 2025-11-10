@@ -138,7 +138,9 @@ vvv
 
 - Deploy the [podinfo](https://github.com/stefanprodan/podinfo) application – as done previously in the [Kustomize lab](#/lab-kustomize) – but this time using [Helm](https://helm.sh/).
 - To prevent conflicts with the previous lab, use new namespaces `podinfo-helm-dev` and `podinfo-helm-prod`.
-- To avoid port conflicts with the previous lab, set the LoadBalancer service's `http` port in production to `12001` and disable the `grcp` port (set the `service.grpcPort` value to `null`).
+- To avoid port conflicts with the previous lab, set the LoadBalancer service's `http` port in production to `12001` and disable the `grcp` port (set the `service.grpcPort` value to `null`). [^lb-restrictions]
+
+[^lb-restrictions]: Due to [cluster limitations](https://github.com/timebertt/platform-engineering-lab/tree/main#limitations), only a single LoadBalancer can use a given port number. Ensure that the used ports do not conflict with other LoadBalancer services in your cluster. Otherwise, your service's external IP will remain `<pending>`.
 
 vvv
 
