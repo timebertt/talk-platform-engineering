@@ -30,6 +30,13 @@ vvv
 
 vvv
 
+## Renovate Overview
+
+![Renovate Overview](../assets/renovate-overview.excalidraw.svg)
+<!-- .element: class="r-stretch" -->
+
+vvv
+
 ## Renovate Workflow
 
 1. Scans the repository for dependencies
