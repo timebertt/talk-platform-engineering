@@ -59,12 +59,14 @@ vvv
 
 ## ingress-nginx Overview
 
-- _The_ Ingress controller for Kubernetes
+- _The_ Ingress controller for Kubernetes [^ingress-nginx-retirement]
 - Maintained by the Kubernetes community: [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx/)
 - Runs as a Deployment in your cluster
 - Controller configures an NGINX proxy based on Ingress resources
 - Exposes all Ingresses via a single LoadBalancer
 - Supports advanced features via annotations: authentication, rate limiting, custom error pages, etc.
+
+[^ingress-nginx-retirement]: That was, until ingress-nginx was [announced to be retired](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/) in March 2026.
 
 vvv
 
