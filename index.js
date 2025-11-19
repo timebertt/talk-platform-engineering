@@ -6,6 +6,7 @@ import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 import Notes from 'reveal.js/plugin/notes/notes.esm.js';
 import Search from 'reveal.js/plugin/search/search.esm.js';
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+import {Tldreveal} from 'tldreveal';
 import GitHubButtons from './reveal/plugin/github-buttons';
 import QRCode from './reveal/plugin/qr-code.js';
 import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
@@ -18,6 +19,7 @@ import markedUnwrapImageParagraph from './reveal/marked/image-paragraph.js';
 import 'reveal.js/dist/reset.css';
 import 'reveal.js/dist/reveal.css';
 import 'highlight.js/styles/obsidian.css';
+import 'tldreveal/dist/esm/index.css';
 import './reveal/theme/dhbw.scss';
 import './custom.scss';
 
@@ -40,7 +42,7 @@ markdown.marked.use(markedUnwrapImageParagraph());
 
 // initialize reveal.js and plugins
 Reveal.initialize({
-  plugins: [markdown, Highlight, Notes, Search, Zoom, GitHubButtons, QRCode, SlidesQRCode],
+  plugins: [markdown, Highlight, Notes, Search, Zoom, Tldreveal, GitHubButtons, QRCode, SlidesQRCode],
   hash: true,
   history: true,
   center: false,
@@ -53,7 +55,14 @@ Reveal.initialize({
   hashOneBasedIndex: true,
 
   width: 1200,
-  height: 700
+  height: 700,
+
+  tldreveal: {
+    isDarkMode: false,
+    defaultStyles: {
+      color: 'red'
+    }
+  }
 });
 
 // expose Reveal to the global scope for exporting PDFs with decktape
