@@ -7,6 +7,7 @@ import Notes from 'reveal.js/plugin/notes/notes.esm.js';
 import Search from 'reveal.js/plugin/search/search.esm.js';
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
 import {Tldreveal} from 'tldreveal';
+import CopyCode from 'reveal.js-copycode';
 import GitHubButtons from './reveal/plugin/github-buttons';
 import QRCode from './reveal/plugin/qr-code.js';
 import SlidesQRCode from './reveal/plugin/slides-qr-code.js';
@@ -20,6 +21,7 @@ import 'reveal.js/dist/reset.css';
 import 'reveal.js/dist/reveal.css';
 import 'highlight.js/styles/obsidian.css';
 import 'tldreveal/dist/esm/index.css';
+import 'reveal.js-copycode/plugin/copycode/copycode.css';
 import './reveal/theme/dhbw.scss';
 import './custom.scss';
 
@@ -42,7 +44,7 @@ markdown.marked.use(markedUnwrapImageParagraph());
 
 // Register a capturing global event listener before tldreveal does.
 // This disables the double click event listener of tldreveal to prevent accidental drawing.
-window.addEventListener("dblclick", (event) => {
+window.addEventListener('dblclick', (event) => {
   // This stops other listeners on the same element (window)
   // from firing if they were added AFTER this one.
   event.stopImmediatePropagation();
@@ -50,7 +52,14 @@ window.addEventListener("dblclick", (event) => {
 
 // initialize reveal.js and plugins
 Reveal.initialize({
-  plugins: [markdown, Highlight, Notes, Search, Zoom, Tldreveal, GitHubButtons, QRCode, SlidesQRCode],
+  plugins: [
+    // reveal built-in plugins
+    markdown, Highlight, Notes, Search, Zoom,
+    // third-party plugins
+    Tldreveal, CopyCode,
+    // custom plugins from this repository
+    GitHubButtons, QRCode, SlidesQRCode
+  ],
   hash: true,
   history: true,
   center: false,
@@ -69,6 +78,18 @@ Reveal.initialize({
     isDarkMode: false,
     defaultStyles: {
       color: 'red'
+    }
+  },
+
+  copycode: {
+    button: 'hover',
+    display: 'icons',
+    plaintextonly: true,
+    style: {
+      copybg: 'grey',
+      scale: 0.8,
+      offset: 0.5,
+      radius: 0.2
     }
   }
 });

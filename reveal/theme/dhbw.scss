@@ -87,6 +87,10 @@ $overlayElementFgColor: 240, 240, 240;
         border-radius: 8px;
         line-height: 1.5;
         max-height: 500px;
+        // When highlighting code lines, there will be multiple code elements.
+        // Ensure they all have the same height, otherwise the first element will glimpse
+        // through at the bottom of the code block.
+        min-height: 100%;
 
         &.hljs {
           padding: 1em;
@@ -94,8 +98,21 @@ $overlayElementFgColor: 240, 240, 240;
       }
     }
 
+    // reveal.js-copycode adds a parent div element for code blocks which contains the pre and button elements.
+    // Adapt the parent to have the same width as the pre element.
+    // Otherwise, the button may be placed outside the code block.
+    .codeblock {
+      width: fit-content;
+      max-width: 100%;
+
+      // remove double margins
+      pre.code-wrapper {
+        margin: 0;
+      }
+    }
+
     // make code blocks in list items full width
-    li pre.code-wrapper {
+    li pre.code-wrapper, li .codeblock {
       width: 100%;
     }
 
