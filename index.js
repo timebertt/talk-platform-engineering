@@ -40,6 +40,14 @@ const markdown = Markdown();
 markdown.marked.use(markedFootnoteReferences());
 markdown.marked.use(markedUnwrapImageParagraph());
 
+// Register a capturing global event listener before tldreveal does.
+// This disables the double click event listener of tldreveal to prevent accidental drawing.
+window.addEventListener("dblclick", (event) => {
+  // This stops other listeners on the same element (window)
+  // from firing if they were added AFTER this one.
+  event.stopImmediatePropagation();
+}, true);
+
 // initialize reveal.js and plugins
 Reveal.initialize({
   plugins: [markdown, Highlight, Notes, Search, Zoom, Tldreveal, GitHubButtons, QRCode, SlidesQRCode],
