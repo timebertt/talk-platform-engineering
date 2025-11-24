@@ -4,6 +4,11 @@
 
 vvv
 
+![Monitor your cluster](../assets/monitor-your-cluster.png)
+<!-- .element: class="r-stretch" -->
+
+vvv
+
 ## What is Observability?
 
 > Observability is the ability to understand the internal state of a system based on telemetry data it produces.
@@ -40,13 +45,14 @@ Kube-Prometheus-Stack is a comprehensive monitoring solution for Kubernetes clus
 - [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/): For alerting based on Prometheus metrics.
 - [kube-state-metrics](https://kubernetes.io/docs/concepts/cluster-administration/kube-state-metrics/): For exporting Kubernetes cluster state metrics.
 - [node-exporter](https://prometheus.io/docs/guides/node-exporter/): For exporting node-level metrics.
-- [cadvisor](https://github.com/google/cadvisor): For exporting container-level metrics.
+- [cAdvisor](https://github.com/google/cadvisor): For exporting container-level metrics.
 
 vvv
 
 ## Kube-Prometheus-Stack Overview
 
 ![Kube-Prometheus-Stack Architecture](../assets/kube-prometheus-stack.excalidraw.svg)
+<!-- .element: class="r-stretch" -->
 
 vvv
 
@@ -107,7 +113,7 @@ vvv
 
 vvv
 
-## cadvisor
+## cAdvisor
 
 - Exposes container-level metrics
 - Collects metrics such as CPU/memory usage, filesystem usage, network statistics for each container
