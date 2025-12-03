@@ -22,7 +22,7 @@ vvv
 - Create a local cluster in a Docker container using [kind](https://kind.sigs.k8s.io/).
 - Create a simple web application using the programming language and framework of your choice (e.g., Node.js with Express, Python with Flask, Go with net/http, etc.)
 - Containerize the application using a Dockerfile, a [buildpack](https://buildpacks.io/), or a language-specific build tool like [ko](https://ko.build/).
-- Add Kubernetes YAML manifests to deploy the application in the cluster (e.g., Deployment, Service, Ingress).
+- Add Kubernetes YAML manifests to deploy the application in the cluster (e.g., Deployment, Service).
 - Install [Skaffold](https://skaffold.dev/) and set up a configuration file (`skaffold.yaml`) including the build and deploy settings for your application.
 - Use `skaffold run` to build the Docker image, load it into the kind cluster, and deploy the application to the local Kubernetes cluster.[^kubeconfig]
 - Make changes to the application code and use `skaffold dev` to automatically rebuild and redeploy the application in the cluster.
